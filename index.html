@@ -18,16 +18,26 @@
       <thead>
         <tr>
           <th scope="col">Name</th>
+          <th scope="col">Abreviation</th>
           <th scope="col">Capital</th>
+          <th scope="col">Currency</th>
+          <th scope="col">Population</th>
           <th scope="col">Flag</th>
+          <th scope="col">Emblem</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(country, index) in countries">
           <td>{{country.name}}</td>
+          <td>{{country.abbreviation}}</td>
           <td>{{country.capital}}</td>
+          <td>{{country.currency}}</td>
+          <td>{{country.population}}</td>
           <td>
             <img :src="country.media.flag" :alt="country.name">
+          </td>
+          <td>
+            <img :src="country.media.emblem" :alt="country.name">
           </td>
         </tr>
       </tbody>
